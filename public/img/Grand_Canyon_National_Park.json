@@ -1,0 +1,78 @@
+[{
+  "SourceFile": "A:/wamp/www/Projet-Metadonnees/public/img/Grand_Canyon_National_Park.jpg",
+  "ExifTool": {
+    "ExifToolVersion": 10.02
+  },
+  "File": {
+    "FileName": "Grand_Canyon_National_Park.jpg",
+    "Directory": "A:/wamp/www/Projet-Metadonnees/public/img",
+    "FileSize": "96 kB",
+    "FileModifyDate": "2015:11:04 19:22:48+01:00",
+    "FileAccessDate": "2015:11:04 19:22:48+01:00",
+    "FileCreateDate": "2015:10:12 16:31:58+02:00",
+    "FilePermissions": "rw-rw-rw-",
+    "FileType": "JPEG",
+    "FileTypeExtension": "jpg",
+    "MIMEType": "image/jpeg",
+    "ExifByteOrder": "Big-endian (Motorola, MM)",
+    "CurrentIPTCDigest": "6b716b5b826fdc8578f0ceebe47edd13",
+    "ImageWidth": 800,
+    "ImageHeight": 534,
+    "EncodingProcess": "Baseline DCT, Huffman coding",
+    "BitsPerSample": 8,
+    "ColorComponents": 3,
+    "YCbCrSubSampling": "YCbCr4:2:2 (2 1)"
+  },
+  "EXIF": {
+    "Orientation": "Horizontal (normal)",
+    "XResolution": 72,
+    "YResolution": 72,
+    "ResolutionUnit": "inches",
+    "YCbCrPositioning": "Centered",
+    "ExifVersion": "0231",
+    "ComponentsConfiguration": "Y, Cb, Cr, -",
+    "FlashpixVersion": "0100",
+    "ColorSpace": "sRGB",
+    "ExifImageWidth": 800,
+    "ExifImageHeight": 534
+  },
+  "XMP": {
+    "XMPToolkit": "Image::ExifTool 10.02",
+    "Location": "Grand Canyon National Park",
+    "Creator": "Pescaiolo",
+    "Description": "Snow covers the top of the South Rim at Grand Canyon National Park.",
+    "Rights": "Public domain",
+    "Subject": ["grand canyon","snow","winter"],
+    "Title": "Grand Canyon National Park in Winter",
+    "Country": "FRA",
+    "Credit": "Wikimedia Commons",
+    "DateCreated": "2008:02:23 08:03:00+01:00",
+    "Headline": "Grand Canyon National Park in Winter",
+    "Source": "http://commons.wikimedia.org/wiki/File:GrandCanyonWinter2008.JPG",
+    "State": "Arizona",
+    "UsageTerms": "http://en.wikipedia.org/wiki/en:public_domain"
+  },
+  "IPTC": {
+    "CodedCharacterSet": "UTF8",
+    "ApplicationRecordVersion": 2,
+    "Sub-location": "Grand Canyon National Park",
+    "Headline": "Grand Canyon National Park in Winter",
+    "By-line": "Pescaiolo",
+    "Source": "http://commons.wikimedia.org/wiki/File:GrandCanyonWinter2008.JPG",
+    "Caption-Abstract": "Snow covers the top of the South Rim at Grand Canyon National Park.",
+    "Credit": "Wikimedia Commons",
+    "DateCreated": "2008:02:23",
+    "CopyrightNotice": "Public domain",
+    "Keywords": ["grand canyon","snow","winter"],
+    "TimeCreated": "08:03:00+01:00",
+    "Province-State": "Arizona",
+    "ObjectName": "Grand Canyon National Park in Winter",
+    "Country-PrimaryLocationName": "USA"
+  },
+  "Composite": {
+    "DateTimeCreated": "2008:02:23 08:03:00+01:00",
+    "DateTimeOriginal": "2008:02:23 08:03:00+01:00",
+    "ImageSize": "800x534",
+    "Megapixels": 0.427
+  }
+}]

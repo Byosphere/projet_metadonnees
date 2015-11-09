@@ -1,0 +1,92 @@
+[{
+  "SourceFile": "A:/wamp/www/projet_metadonnees(v2)/public/img/image-5640d85a503bb.jpg",
+  "ExifTool": {
+    "ExifToolVersion": 10.02
+  },
+  "File": {
+    "FileName": "image-5640d85a503bb.jpg",
+    "Directory": "A:/wamp/www/projet_metadonnees(v2)/public/img",
+    "FileSize": "78 kB",
+    "FileModifyDate": "2015:11:09 18:31:28+01:00",
+    "FileAccessDate": "2015:11:09 18:31:28+01:00",
+    "FileCreateDate": "2015:11:09 18:31:06+01:00",
+    "FilePermissions": "rw-rw-rw-",
+    "FileType": "JPEG",
+    "FileTypeExtension": "jpg",
+    "MIMEType": "image/jpeg",
+    "ExifByteOrder": "Big-endian (Motorola, MM)",
+    "CurrentIPTCDigest": "c1e7cc53244f7b2b4ef06a7680088752",
+    "ImageWidth": 550,
+    "ImageHeight": 488,
+    "EncodingProcess": "Progressive DCT, Huffman coding",
+    "BitsPerSample": 8,
+    "ColorComponents": 3,
+    "YCbCrSubSampling": "YCbCr4:4:4 (1 1)"
+  },
+  "EXIF": {
+    "Orientation": "Horizontal (normal)",
+    "XResolution": 72,
+    "YResolution": 72,
+    "ResolutionUnit": "inches",
+    "Software": "Adobe Photoshop CS6 (Windows)",
+    "ModifyDate": "2014:09:01 21:24:14",
+    "ColorSpace": "Uncalibrated",
+    "ExifImageWidth": 550,
+    "ExifImageHeight": 488,
+    "Compression": "JPEG (old-style)",
+    "ThumbnailOffset": 312,
+    "ThumbnailLength": 4670
+  },
+  "Photoshop": {
+    "IPTCDigest": "00000000000000000000000000000000",
+    "XResolution": 72,
+    "DisplayedUnitsX": "inches",
+    "YResolution": 72,
+    "DisplayedUnitsY": "inches",
+    "GlobalAngle": 120,
+    "GlobalAltitude": 30,
+    "PhotoshopThumbnail": "(Binary data 4670 bytes, use -b option to extract)",
+    "PhotoshopQuality": 9,
+    "PhotoshopFormat": "Progressive",
+    "ProgressiveScans": "3 Scans"
+  },
+  "IPTC": {
+    "City": " sqd q dqs qs dqs",
+    "Source": " sqd qdq dq",
+    "ApplicationRecordVersion": 4
+  },
+  "XMP": {
+    "XMPToolkit": "Image::ExifTool 10.02",
+    "DateAcquired": "2014:09:01 21:24:19",
+    "Creator": "sqd qs",
+    "Description": "sqd qidqi jdqio qjoi djqoi sjdqiosj oqisjdqosijdqs jdoqs",
+    "Format": "image/jpeg",
+    "Title": "Dark Rondoudou",
+    "ColorMode": "RGB",
+    "Country": "dsqdqqdq ",
+    "CreateDate": "2014:09:01 21:24:14+02:00",
+    "CreatorTool": "Adobe Photoshop CS6 (Windows)",
+    "MetadataDate": "2014:09:01 21:24:14+02:00",
+    "ModifyDate": "2014:09:01 21:24:14+02:00",
+    "DocumentID": "xmp.did:2E4DE28E0D32E4119395A5DDE658D4C7",
+    "HistoryAction": ["created","saved"],
+    "HistoryInstanceID": ["xmp.iid:2E4DE28E0D32E4119395A5DDE658D4C7","xmp.iid:2F4DE28E0D32E4119395A5DDE658D4C7"],
+    "HistorySoftwareAgent": ["Adobe Photoshop CS6 (Windows)","Adobe Photoshop CS6 (Windows)"],
+    "HistoryWhen": ["2014:09:01 21:24:14+02:00","2014:09:01 21:24:14+02:00"],
+    "HistoryChanged": "/",
+    "InstanceID": "xmp.iid:2F4DE28E0D32E4119395A5DDE658D4C7",
+    "OriginalDocumentID": "xmp.did:2E4DE28E0D32E4119395A5DDE658D4C7",
+    "UsageTerms": "dfsqdq fqfdsf qsd qsd q"
+  },
+  "APP14": {
+    "DCTEncodeVersion": 100,
+    "APP14Flags0": "[14]",
+    "APP14Flags1": "(none)",
+    "ColorTransform": "YCbCr"
+  },
+  "Composite": {
+    "ImageSize": "550x488",
+    "Megapixels": 0.268,
+    "ThumbnailImage": "(Binary data 4670 bytes, use -b option to extract)"
+  }
+}]
