@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-<div class="grid-items" >
+<div class="grid-items">
     @foreach($tabImages as $image)
     <figure itemscope itemtype="https://schema.org/Photograph">
         <img itemprop="image" src="{{$image['src']}}" alt="{{$image['name']}}"/>

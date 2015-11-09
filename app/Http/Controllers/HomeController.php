@@ -86,33 +86,33 @@ class HomeController extends Controller
 				$imgSlug = str_slug($datas["name"]);
             }
         }
-        $imgPath = $this->tabImages[$slug]['path'];
-        $json = json_decode(file_get_contents($this->tabImages[$slug]['json']), true)[0];
-        array_shift($datas); //retirer la méthode
-        array_shift($datas); //retirer le token
+
+        array_shift($datas); //retirer la méthode put
+        array_shift($datas); //retirer le token CSRF
         foreach ($datas as $k => $v) {
-            if($v != "") {
-                if(explode("_", $k)[0] =="tab"){ // si la données stockée était un tableau
+            if($v != "") { // si la donnée à été modifiée
+                if(explode("_", $k)[0] =="tab"){ // si la données stockée était un tableau (keyword)
 
+                     $liste = explode(" ", $v); // on recréé le tableau à partir des éléments ajoutés
 
-                    $json[explode("_", $k)[1]] = explode(" ", $v); // on recréé le tableau à partir des éléments ajoutés
+					foreach ($liste as $val) { //on ajoute chacun des éléments
+						$exec .='-'.explode("_", $k)[1].'='.$val.' ';
+					}
 
                 } else {
 
-                    //$json[$k] = $v; // sinon on stocke simplement la valeur
-                    if(sizeof(explode("_", $k)) >1){
+                    if(sizeof(explode("_", $k)) >1){ //si ce n'est pas une donnée de base
                         $exec .='-'.explode("_", $k)[1].'='.$v.' ';
                     }
                 }
 
             }
         }
-        //file_put_contents($this->tabImages[$slug]['json'], "[".json_encode($json)."]");
-        exec("exiftool ".$exec.$this->tabImages[$slug]['path']);
+        exec("exiftool ".$exec.$this->tabImages[$slug]['path']); // on execute la fonction exiftool en 1 seule fois avec toutes les nouvelles données
         unlink($this->tabImages[$slug]['json']); //on supprime l'ancien fichier json pour forcer à le recréer
 
         Session::flash('message', "Vos modifications ont bien été enregistrés dans l'image !");
-		
+
 		if(isset($imgSlug)) {
 			return redirect('image/'.$imgSlug);
 		} else {
@@ -138,13 +138,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function add() {
+    public function add()
+	{
 
         $regles = array(
 
 			'photo' => 'image|required'
 		);
+
         $validation = Validator::make(Request::all(), $regles);
+
         if($validation->fails()){
             Session::flash('message', "Une erreur est survenue lors du téléchargement de l'image !");
             return redirect()->back();
@@ -167,15 +170,12 @@ class HomeController extends Controller
 
                 }
             }
-
         }
-
-
     }
 
     private function genererDataImages() {
 
-        $tabData =  glob(public_path().'\img\*.{jpg,png,gif}', GLOB_BRACE);
+        $tabData =  glob(public_path().'\img\*.{jpg,png,gif}', GLOB_BRACE); //on trouve toutes les images dans le dossier
         foreach ($tabData as $img) {
 
             $this->addImage($img);
@@ -190,28 +190,30 @@ class HomeController extends Controller
         $imgSrc = asset('img/'.$imgName); // chemin relatif de l'image
         array_pop($tabImgName);
         $json = implode("\\", $tabImgName)."\\".explode(".", $imgName)[0].".json"; //fichier json
-        $xmp = implode("\\", $tabImgName)."\\".explode(".", $imgName)[0].".xmp"; //fichier json
+        $xmp = implode("\\", $tabImgName)."\\".explode(".", $imgName)[0].".xmp"; //fichier xmp
 
-        if(!file_exists($json)) { // si le fichier json n'existe pas on le créé (au cas ou)
+        if(!file_exists($json)) { // si le fichier json n'existe pas on le créé
 
             exec("exiftool -g -json $imgPath > $json");
         }
 
-        if(!file_exists($xmp)) { // si le fichier xmp n'existe pas on le créé (au cas ou)
+        if(!file_exists($xmp)) { // si le fichier xmp n'existe pas on le créé
 
             exec("exiftool -tagsfromfile $imgPath > $xmp");
         }
-        $jsonData = json_decode(file_get_contents($json), true);
+        $jsonData = json_decode(file_get_contents($json), true); // on récupère les données du json dans un tableau
 
-        if(isset($jsonData[0]['XMP']['Title'])) {
+        if(isset($jsonData[0]['XMP']['Title'])) { //si l'image a un titre on le défini, sinon c'est le nom du fichier
+
             $imgName = $jsonData[0]['XMP']['Title'];
         }
-        if(isset($jsonData[0]["XMP"]['Creator'])) {
+        if(isset($jsonData[0]["XMP"]['Creator'])) { //si l'image a un auteur
+
             $auteur = $jsonData[0]["XMP"]['Creator'];
         } else {
 			$auteur = "";
 		}
-        $imgSlug = str_slug($imgName);
+        $imgSlug = str_slug($imgName); // génération du slug
         $newImg = array('name' => $imgName, 'auteur'=>$auteur, 'src' => $imgSrc, 'slug' => $imgSlug, 'path' => $imgPath, 'json' => $json); // on créé un tableau avec les données principales des images
         $this->tabImages[$imgSlug] = $newImg;
         return $this->tabImages[$imgSlug];

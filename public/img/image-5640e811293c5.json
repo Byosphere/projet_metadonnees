@@ -1,0 +1,48 @@
+[{
+  "SourceFile": "A:/wamp/www/projet_metadonnees(v2)/public/img/image-5640e811293c5.jpg",
+  "ExifTool": {
+    "ExifToolVersion": 10.02
+  },
+  "File": {
+    "FileName": "image-5640e811293c5.jpg",
+    "Directory": "A:/wamp/www/projet_metadonnees(v2)/public/img",
+    "FileSize": "563 kB",
+    "FileModifyDate": "2015:11:09 19:38:24+01:00",
+    "FileAccessDate": "2015:11:09 19:38:24+01:00",
+    "FileCreateDate": "2015:11:09 19:38:09+01:00",
+    "FilePermissions": "rw-rw-rw-",
+    "FileType": "JPEG",
+    "FileTypeExtension": "jpg",
+    "MIMEType": "image/jpeg",
+    "CurrentIPTCDigest": "97c3a71b618c18754f33ec2da33ac628",
+    "ImageWidth": 2160,
+    "ImageHeight": 1417,
+    "EncodingProcess": "Baseline DCT, Huffman coding",
+    "BitsPerSample": 8,
+    "ColorComponents": 3,
+    "YCbCrSubSampling": "YCbCr4:2:0 (2 2)"
+  },
+  "JFIF": {
+    "JFIFVersion": 1.01,
+    "ResolutionUnit": "None",
+    "XResolution": 1,
+    "YResolution": 1
+  },
+  "IPTC": {
+    "City": " dqsd qs",
+    "Source": "qsdqs",
+    "ApplicationRecordVersion": 4
+  },
+  "XMP": {
+    "XMPToolkit": "Image::ExifTool 10.02",
+    "Creator": "JJ Abrahams",
+    "Description": "sdq sq qsd qsd qsd qsd qsd qs dqsd qs",
+    "Title": "Star Wars the force Awakens",
+    "Country": " qsd qs",
+    "UsageTerms": " qsd qsd q"
+  },
+  "Composite": {
+    "ImageSize": "2160x1417",
+    "Megapixels": 3.1
+  }
+}]

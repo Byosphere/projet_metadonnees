@@ -76,16 +76,16 @@
                             @foreach($val as $k => $v)
                                 @if(!is_array($v))
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">{{ $k }}</label>
+                                    <label for="{{ $key.'_'.$k }}" class="col-sm-2 control-label">{{ $k }}</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" name="{{ $key.'_'.$k }}" placeholder="{{$v}}">
                                     </div>
                                 </div>
                                 @else
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">{{ $k }}</label>
+                                    <label for="{{ 'tab_'.$k }}" class="col-sm-2 control-label">{{ $k }} <small>(séparer avec un espace)</small></label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="{{ $key.'_'.$k }}" placeholder="{{implode(" ", $v)}}">
+                                        <input type="text" class="form-control" name="{{ 'tab_'.$k }}" placeholder="{{implode(" ", $v)}}">
                                     </div>
                                 </div>
                                 @endif
